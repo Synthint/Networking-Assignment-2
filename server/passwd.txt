@@ -1,0 +1,6 @@
+//Password File
+(fbueller,ferrari,Ferris Bueller,Business,Ed Rooney);
+(smeyer,password,Sean Meyer,Computer Science,Professor Marmelstein);
+(rreynolds,password1,Ryan Reynolds,Theater,Ajax);
+(todinson,mjolnir,Thor Odinson,Criminal Justice,Frigga);
+(lskywalker,force,Luke Skywalker,Philosophy,Yoda);

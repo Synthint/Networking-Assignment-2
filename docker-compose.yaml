@@ -1,0 +1,35 @@
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - type: bind
+        source: ./server
+        target: /opt/server
+    networks:
+      server-client:
+        ipv4_address: 192.168.0.5
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - type: bind
+        source: ./client
+        target: /opt/client
+    networks:
+      - server-client
+
+volumes: 
+  server:
+  client:
+
+networks:
+  server-client:
+    ipam:
+     config:
+       - subnet: 192.168.0.0/16
